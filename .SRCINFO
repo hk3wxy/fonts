@@ -1,0 +1,15 @@
+pkgname = fonts-hk3wxy
+pkgver = 1.0
+pkgrel = 1
+url = https://github.com/hk3wxy/fonts
+pkgdesc = Personal collection of fonts from the repository
+arch = any
+license = MIT
+depends = fontconfig
+source = fonts/
+sha256sums = SKIP
+
+package() {
+    install -d "$pkgdir/usr/share/fonts/${pkgname}"
+    cp -a "$srcdir/fonts/"* "$pkgdir/usr/share/fonts/${pkgname}/"
+}
